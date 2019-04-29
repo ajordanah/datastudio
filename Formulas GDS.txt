@@ -7,13 +7,10 @@ WHEN REGEXP_MATCH(Ad group,"(?i).*\\(idi\\).*") THEN "Idiomas"
 ELSE "Inst. - Otros" 
 End 
 
+XXXX Esta ni idea, me la pasÃ³ Santi
 
-
-XXXX Esta ni idea, me la pasó Santi
-
-COUNT_DISTINCT(CASE WHEN País IN("Spain") THEN _matchCode Sesión ELSE "" END)
-
-COUNT_DISTINCT(CASE WHEN País IN("Spain") THEN _matchCode Sesión ELSE "" END)
+COUNT_DISTINCT(CASE WHEN PaÃ­s IN("Spain") THEN _matchCode SesiÃ³n ELSE "" END)
+COUNT_DISTINCT(CASE WHEN PaÃ­s IN("Spain") THEN _matchCode SesiÃ³n ELSE "" END)
 
 
 CASE
