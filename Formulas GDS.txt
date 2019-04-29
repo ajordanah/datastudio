@@ -1,0 +1,39 @@
+Esta formula es para crear dimensiones personalizadas en datastudio, en este caso filtra los grupos de anuncios con expresiones regulares_  continene (PS) o (ps) y los agrupa como postgrado. 
+
+CASE 
+WHEN REGEXP_MATCH(Ad group,"(?i).*\\(ps\\).*") THEN "Postgrado" 
+WHEN REGEXP_MATCH(Ad group,"(?i).*\\(gr\\).*") THEN "Grado" 
+WHEN REGEXP_MATCH(Ad group,"(?i).*\\(idi\\).*") THEN "Idiomas" 
+ELSE "Inst. - Otros" 
+End 
+
+
+
+XXXX Esta ni idea, me la pasó Santi
+
+COUNT_DISTINCT(CASE WHEN País IN("Spain") THEN _matchCode Sesión ELSE "" END)
+
+COUNT_DISTINCT(CASE WHEN País IN("Spain") THEN _matchCode Sesión ELSE "" END)
+
+
+CASE
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MBA.*") THEN "MBA"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*EMBA.*") THEN "EMBA"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*GMBA.*") THEN "GMBA"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*IMBA.*") THEN "IMBA"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*GESCO.*") THEN "GESCO"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MIM.*") THEN "MIM"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MMS.*") THEN "MMS"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MML.*") THEN "MML"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MDMD.*") THEN "MDMD"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MBM.*") THEN "MBM"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MITB.*") THEN "MITB"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MPC.*") THEN "MPC"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*DRHO.*") THEN "DRHO"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*LOCS.*") THEN "LOCS"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MDF.*") THEN "MDF"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*OGC.*") THEN "OGC"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*DCNT.*") THEN "DCNT"
+  WHEN REGEXP_MATCH(Ad group, "(?i).*MDPO.*") THEN "MDPO"
+  ELSE "Otros"
+END
